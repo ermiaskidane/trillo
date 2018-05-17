@@ -75,6 +75,11 @@
       width: 100%;
       background-color: var(--color-grey-light-3);
     }
+    
+    &:focus ~ .search__hidden{
+          opacity: 1;
+          visibility: visible;
+        }
 
     &::-webkit-input-placeholder{
       font-weight: 100;
