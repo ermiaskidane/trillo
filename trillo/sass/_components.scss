@@ -291,14 +291,15 @@
 
 .gallery{
   display: flex;
-
-  &__item:not(:last-of-type){
-    margin-right: 1rem;
-  }
+  
       &__item{
       position: relative;
       
-       
+       &:not(:last-of-type){
+         margin-right: 1rem;
+        }
+        
+        
       &--caption{
         background-color: rgba(204, 204, 204, .8);
         width: 60%;
