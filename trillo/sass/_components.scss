@@ -295,6 +295,50 @@
   &__item:not(:last-of-type){
     margin-right: 1rem;
   }
+      &__item{
+      position: relative;
+      
+       
+      &--caption{
+        background-color: rgba(204, 204, 204, .8);
+        width: 60%;
+        height: 35%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: width .3s cubic-bezier(.13,.04,.86, .09) .2s;
+
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+
+        display: flex;
+        justify-content: center;
+
+      }
+
+      &--text{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--color-grey-dark-4);
+        margin: 1rem 1rem;
+        text-decoration: none;
+        width: 100%;
+        text-transform: uppercase;
+
+        &:hover{
+          color: var(--color-primary-dark);
+        }
+      }
+
+      &:hover > :last-child{
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
 
   &__photo{
     width: 100%;
